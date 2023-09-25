@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Continuous Time Display</title>
+</head>
+<body>
+    <div id="timeDisplay">sdf</div>
+
+    <script>
+        function updateTime() {
+            var current_date = new Date();
+            var hours = String(current_date.getHours()).padStart(2, '0');
+            var minutes = String(current_date.getMinutes()).padStart(2, '0');
+            var seconds = String(current_date.getSeconds()).padStart(2, '0');
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('timeDisplay').textContent = timeString;
+        }
+    
+        setInterval(updateTime, 1000); // Update time every second
+        console.log(hours);
+      
+    </script>
+
+    <!-- <script>
+        var current = new Date();
+       document.getElementById("timeDisplay").innerHTML=current;
+    </script> -->
+
+    </body>
+</html>

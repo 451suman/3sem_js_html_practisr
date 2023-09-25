@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup Form</title>
+<link rel="stylesheet" href="validate.css"> <!-- Add your stylesheet link here -->
+<script>
+function validate() {
+    let error = 0;
+    var msg = "";
+    
+    // Get input values
+    var name = document.getElementById("name").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+    var country = document.getElementById("country").value;
+    
+    // Clear previous error messages
+    document.getElementById("errname").innerHTML = "";
+    document.getElementById("errpassword").innerHTML = "";
+    document.getElementById("erremail").innerHTML = "";
+    document.getElementById("errgender").innerHTML = "";
+    document.getElementById("errcountry").innerHTML = "";
+
+    // Validate name
+    if (name === "") {
+        document.getElementById("errname").innerHTML = "Enter a name";
+        ++error;
+    }
+
+    // Validate password
+    if (password === "") {
+        document.getElementById("errpassword").innerHTML = "Password is empty";
+        ++error;
+    }
+
+    // Validate email
+    if (email === "") {
+        document.getElementById("erremail").innerHTML = "Email is empty";
+        ++error;
+    }
+
+    // Validate gender
+    if (!gender) {
+        document.getElementById("errgender").innerHTML = "Select gender";
+        ++error;
+    }
+
+    // Validate country
+    if (country === "") {
+        document.getElementById("errcountry").innerHTML = "Select a country";
+        ++error;
+    }
+
+    if (error > 0) {
+        return false;
+    } else {
+        // alert(msg);
+        return true;
+    }
+}
+
+</script>
+</head>
+<body>
+  <form class="signup-form" name="Signup" onsubmit="return validate()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <span id="errname"></span>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="errpassword"></span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <span id="erremail"></span>
+
+    <label>Gender:</label>
+    <label>
+      <input type="radio" id="male" name="gender" value="male"> Male
+      <input type="radio" id="female" name="gender" value="female"> Female
+    </label>
+    <span id="errgender"></span>
+    
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value=""></option>
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="uk">UK</option>
+      <!-- Add more options here -->
+    </select>
+    <span id="errcountry"></span>
+    <br>
+    
+    <label>
+      <input type="checkbox" name="terms"> I agree to the terms and conditions
+    </label>
+    <span id="errterms"></span>
+    
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>

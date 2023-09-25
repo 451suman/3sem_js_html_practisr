@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        this is container 
+        <span id="time">sa</span>
+    </div>
+    <script>
+        console.log("this is date and time tutorial ");
+        var now = new Date(); // Corrected the capitalization
+        console.log(now);
+        // var noww = new Date(5000); 
+        // console.log(noww);
+
+        let newDate=new Date("2089-09-24");
+        console.log(newDate);
+
+        // let newDate=new Date(year,month,date, hours,minutes,seconds,milliseconods );
+        // month is in array 0= jan,1 =feb
+        let newDates=new Date(2078,1,3,3,6,7,5);
+        console.log(newDates);
+
+
+
+      
+        // this newDate is link with up
+        let yr = now.getFullYear();
+        console.log("the year is",yr);
+
+      
+        let dt = now.getDate();
+        console.log("the date is",dt);
+
+      
+        let m = now.getMonth();
+        console.log("the month is",m);
+
+      
+        let h = now.getHours();
+        console.log("the hrs is",h);
+
+    
+
+     setInterval(updateTime,1000);
+        function updateTime(){
+        //    var timeCurent= new date(); 
+           time.innerHTML=new Date(); 
+        }
+
+      
+
+
+
+         
+    </script>
+</body>
+</html>

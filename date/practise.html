@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="timeDisplay"></span>
+    <script>
+       function updateTime(){
+        var currentdate = new Date();
+        // console.log(currentdate);
+        
+        var h = currentdate.getHours();
+        // console.log(h);
+
+        var m = currentdate.getMinutes(); // Fixed variable name here
+        // console.log(m);
+         
+        var s = currentdate.getSeconds();
+        // console.log(s);
+
+        var timeString = h + ':' + m + ':' + s; 
+        document.getElementById('timeDisplay').innerHTML = timeString;
+       }
+       setInterval(updateTime,1000);
+    </script>
+</body>
+</html>

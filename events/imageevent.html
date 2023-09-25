@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            max-height: 200px;
+            transition: max-height 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <img src="l.jpg" alt="" id="img">
+    <button id="btn">Click to magnify</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+        var img = document.getElementById("img");
+        var btn = document.getElementById("btn");
+        var resetBtn = document.getElementById("resetBtn");
+
+          // Add event listeners
+                          //   ("event_listener", <Function_name>)
+          btn.addEventListener("click", magnify);
+        resetBtn.addEventListener("click", resetSize);
+
+        // Function to handle magnification
+        function magnify() {
+            img.style.maxHeight = '400px';
+        }
+
+        // Function to handle resetting
+        function resetSize() {
+            img.style.maxHeight = '200px';
+        }
+
+      
+    </script>
+</body>
+</html>

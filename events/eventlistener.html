@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ddd">hover here to Display text</div>
+    <script>
+        var dis = document.getElementById("ddd");
+        dis.addEventListener("mouseover",display);
+        dis.addEventListener("click",Cdisplay);
+        function display(){
+            document.getElementById("ddd").innerHTML="this is magic";
+        }
+        function Cdisplay(){
+            document.getElementById("ddd").hidden="this is magic after click";
+        }
+    </script>
+</body>
+</html>

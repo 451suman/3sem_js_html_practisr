@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DEmo of event listener</h1>
+    <p id="pid">Hover here</p>
+    <script>
+        var pid = document.getElementById("pid");
+        
+        pid.addEventListener("mouseover", display);
+        
+        function display() {
+            pid.innerHTML = "askldhaklsdhkajsdg";
+        }
+
+        pid.addEventListener("mouseout", back);
+        
+        function back() {
+            pid.innerHTML = "mouse out";
+        }
+    </script>
+
+
+
+<br>
+
+<p id="abc" onclick="a()">asdasd</p>
+<script>
+    function a(){
+        alert("asdjbasd");
+    }
+</script>
+</body>
+</html>

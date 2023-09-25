@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Color Changer</title>
+</head>
+<body>
+  <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#'; // Initialize color with '#' to make it a valid hexadecimal color code.
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = getRandomColor();
+      console.log(getRandomColor());
+    }
+
+    // Call the function every second
+    setInterval(changeBackgroundColor, 1000);
+
+    // Initial background color when the page loads
+    // document.body.style.backgroundColor = getRandomColor();
+  </script>
+</body>
+</html>

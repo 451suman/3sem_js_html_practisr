@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="small"></p>
+    <p id="large"></p>
+    
+    <script>
+        let a = [1, 2, 3, 444, 5, 6, 7, 88, 55, 9];
+        let smallest = a[0]; // Initialize smallest with the first element of the array
+        let largest = a[0]; // Initialize largest with the first element of the array
+
+        for (let i = 1; i < a.length; i++) { // Start the loop from index 1
+            if (a[i] > largest) {
+                largest = a[i];
+            }
+
+            if (a[i] < smallest) {
+                smallest = a[i];
+            }
+        }
+
+        document.getElementById('large').innerHTML = largest;
+        document.getElementById('small').innerHTML = smallest;
+    </script>
+</body>
+</html>

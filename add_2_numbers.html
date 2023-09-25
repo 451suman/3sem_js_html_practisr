@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ans1=<p id="ans"></p>
+    <br>
+    ans2=<p id="ans2"></p>
+    <script>
+
+        // without parseInt OR parseFloat  
+        // if  a=5 , a+a= 5+5=55
+       var a = prompt("Enter a number");
+        var ans= a+a;
+        document.getElementById("ans").innerHTML=ans;
+
+        // with parseInt 5+5=10 because parseInt convert string value into integer
+       var b = parseInt(a);
+        var ans= b+b;
+        document.getElementById("ans2").innerHTML=ans;
+
+
+        let c=10;
+        let d=c+c;;
+        console.log(d);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
